@@ -83,7 +83,7 @@ export class LocalTodoService {
 
   loadData() {
     this.storage.get('todo')
-      .then(sections => this.sections = sections);
+      .then(sections => this.sections = sections || []);
   }
 
   saveData() {

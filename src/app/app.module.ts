@@ -3,25 +3,28 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from "@ionic/storage/es2015";
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 import { HistoryActionService } from "../providers/history-action.service";
 import { LocalTodoService } from "../providers/local-todo.service";
+import { TodoListPage } from "../pages/todo-list/todo-list";
+import { TodoListPageModule } from "../pages/todo-list/todo-list.module";
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage
+    MyApp
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    TodoListPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    TodoListPage
   ],
   providers: [
     StatusBar,
