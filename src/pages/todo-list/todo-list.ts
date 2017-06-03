@@ -5,6 +5,7 @@ import { TodoSection } from './../../models/todo-section';
 import { TodoSectionPage } from './../todo-section/todo-section';
 import { LocalTodoService } from './../../providers/local-todo.service';
 import { HistoryActionPage } from "../history-action/history-action";
+import { ApiTodoService } from "../../providers/api-todo.service";
 
 /**
  * Generated class for the TodoListPage page.
@@ -24,7 +25,8 @@ export class TodoListPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public localTodo: LocalTodoService,
-    public modalCtrl: ModalController
+    public modalCtrl: ModalController,
+    public apiTodo: ApiTodoService
   ) {
   }
 

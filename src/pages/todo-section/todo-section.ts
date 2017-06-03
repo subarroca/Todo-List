@@ -5,6 +5,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { LocalTodoService } from "../../providers/local-todo.service";
 import { TodoItem } from "../../models/todo-item";
 import { HistoryActionPage } from "../history-action/history-action";
+import { ApiTodoService } from "../../providers/api-todo.service";
 
 /**
  * Generated class for the TodoSectionPage page.
@@ -25,6 +26,7 @@ export class TodoSectionPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public localTodo: LocalTodoService,
+    public apiTodo: ApiTodoService,
     public modalCtrl: ModalController
   ) {
     // console.log(navParams);
