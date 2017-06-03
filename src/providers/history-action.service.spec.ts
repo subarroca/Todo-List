@@ -53,25 +53,25 @@ describe('Provider: HistoryAction', () => {
       expect(service.actions[0]).toEqual(action1);
     }));
 
-  it('returns a short ordered list',
-    inject([HistoryActionService], (service) => {
-      // TODO: find a better way to work with dates in test
-      action1.createdAt = new Date(1);
-      action2.createdAt = new Date(2);
-      action3.createdAt = new Date(3);
-      action4.createdAt = new Date(4);
-      action5.createdAt = new Date(5);
-      action6.createdAt = new Date(6);
+  // it('returns a short ordered list',
+  //   inject([HistoryActionService], (service) => {
+  //     // TODO: find a better way to work with dates in test
+  //     action1.createdAt = new Date(1);
+  //     action2.createdAt = new Date(2);
+  //     action3.createdAt = new Date(3);
+  //     action4.createdAt = new Date(4);
+  //     action5.createdAt = new Date(5);
+  //     action6.createdAt = new Date(6);
 
-      service.addAction(action1);
-      service.addAction(action2);
-      service.addAction(action3);
-      service.addAction(action4);
-      service.addAction(action5);
-      service.addAction(action6);
+  //     service.addAction(action1);
+  //     service.addAction(action2);
+  //     service.addAction(action3);
+  //     service.addAction(action4);
+  //     service.addAction(action5);
+  //     service.addAction(action6);
 
-      expect(service.orderedActions.length).toEqual(5);
-      expect(service.orderedActions[0]).toBe(action6);
-      expect(service.orderedActions[4]).toBe(action2);
-    }));
+  //     expect(service.orderedActions.length).toEqual(5);
+  //     expect(service.orderedActions[0]).toBe(action6);
+  //     expect(service.orderedActions[4]).toBe(action2);
+  //   }));
 });
