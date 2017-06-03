@@ -11,6 +11,7 @@ import { LocalTodoService } from "../providers/local-todo.service";
 import { TodoListPage } from "../pages/todo-list/todo-list";
 import { TodoListPageModule } from "../pages/todo-list/todo-list.module";
 import { TodoSectionPageModule } from "../pages/todo-section/todo-section.module";
+import { HistoryActionPageModule } from "../pages/history-action/history-action.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TodoSectionPageModule } from "../pages/todo-section/todo-section.module
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     TodoListPageModule,
-    TodoSectionPageModule
+    TodoSectionPageModule,
+    HistoryActionPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -4,6 +4,7 @@ import { HistoryActionService } from './history-action.service';
 import { TodoSection } from './../models/todo-section';
 import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
+import { TodoStatus } from "../models/todo-status.enum";
 
 
 @Injectable()
@@ -58,7 +59,7 @@ export class LocalTodoService {
     item.toggle();
 
     this.historyActionService.addAction(new HistoryAction({
-      title: `Toggled item ${item.title} to ${item.status}`
+      title: `Toggled item ${item.title} to ${item.status === TodoStatus.TODO ? 'todo' : 'done'}`
     }));
     this.saveData();
   }

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 import { TodoSection } from './../../models/todo-section';
 import { TodoSectionPage } from './../todo-section/todo-section';
 import { LocalTodoService } from './../../providers/local-todo.service';
+import { HistoryActionPage } from "../history-action/history-action";
 
 /**
  * Generated class for the TodoListPage page.
@@ -22,7 +23,8 @@ export class TodoListPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public localTodo: LocalTodoService
+    public localTodo: LocalTodoService,
+    public modalCtrl: ModalController
   ) {
   }
 
@@ -33,6 +35,11 @@ export class TodoListPage {
   addSection() {
     this.localTodo.addSection(this.newSectionName);
     this.newSectionName = '';
+  }
+
+  showHistory() {
+    let modal = this.modalCtrl.create(HistoryActionPage);
+    modal.present();
   }
 
 }
