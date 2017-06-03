@@ -12,7 +12,7 @@ export class TodoSection {
   }) {
     if (options) {
       this.title = options.title;
-      this.items = options.items || [];
+      this.items = (options.items || []).map(item => new TodoItem(item));
     }
   }
 

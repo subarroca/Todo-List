@@ -10,6 +10,7 @@ import { HistoryActionService } from "../providers/history-action.service";
 import { LocalTodoService } from "../providers/local-todo.service";
 import { TodoListPage } from "../pages/todo-list/todo-list";
 import { TodoListPageModule } from "../pages/todo-list/todo-list.module";
+import { TodoSectionPageModule } from "../pages/todo-section/todo-section.module";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TodoListPageModule } from "../pages/todo-list/todo-list.module";
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    TodoListPageModule
+    TodoListPageModule,
+    TodoSectionPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

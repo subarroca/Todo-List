@@ -22,4 +22,8 @@ export class TodoItem {
       this.status = TodoStatus.TODO;
     }
   }
+
+  get done() {
+    return this.status === TodoStatus.DONE;
+  }
 }

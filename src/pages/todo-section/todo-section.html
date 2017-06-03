@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{section.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content>
+  <form  (ngSubmit) = "addItem()">
+    <ion-item>
+      <ion-input type="text" placeholder="Item name" [(ngModel)] = newItemName name = "item"></ion-input>
+    </ion-item>
+    <button ion-button margin>Add</button>
+  </form>
+
+  <ion-list>
+    <ion-item  *ngFor="let item of section.orderedItems">
+      <ion-label>{{ item.title }}</ion-label>
+      <ion-checkbox [checked]=item.done (ionChange)= toggleItem(item)></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

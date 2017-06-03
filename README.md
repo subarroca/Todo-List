@@ -19,3 +19,7 @@ https://www.joshmorony.com/introduction-to-testing-ionic-2-applications-with-tes
 
 ### Improvements
 * Update angular-cli to @angular/cli
+* Add a counter with completed/total items in section
+* Improve styling
+* Possibility to remove completed todos (or one by one)
+* Show creation time of items

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { TodoSection } from './../../models/todo-section';
-// import { TodoSectionPage } from './../todo-section/todo-section';
+import { TodoSectionPage } from './../todo-section/todo-section';
 import { LocalTodoService } from './../../providers/local-todo.service';
 
 /**
@@ -27,7 +27,7 @@ export class TodoListPage {
   }
 
   sectionSelected(section: TodoSection) {
-    // this.navCtrl.push(TodoSectionPage, { section: section });
+    this.navCtrl.push(TodoSectionPage, { section: section });
   }
 
   addSection() {

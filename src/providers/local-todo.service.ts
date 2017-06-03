@@ -36,11 +36,11 @@ export class LocalTodoService {
     this.saveData();
   }
 
-  addItemToSection(section: TodoSection, item: TodoItem) {
-    section.addItem(item);
+  addItemToSection(section: TodoSection, itemName: string) {
+    section.addItem(new TodoItem({ title: itemName }));
 
     this.historyActionService.addAction(new HistoryAction({
-      title: `Added item ${item.title} to section ${section.title}`
+      title: `Added item ${itemName} to section ${section.title}`
     }));
     this.saveData();
   }
@@ -83,7 +83,9 @@ export class LocalTodoService {
 
   loadData() {
     this.storage.get('todo')
-      .then(sections => this.sections = sections || []);
+      .then(_sections =>
+        this.sections = (_sections || []).map(section => new TodoSection(section)
+        ));
   }
 
   saveData() {

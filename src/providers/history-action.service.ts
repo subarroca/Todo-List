@@ -13,6 +13,7 @@ export class HistoryActionService {
   constructor() { }
 
   addAction(action: HistoryAction) {
+    console.log(action);
     this.actions.push(action);
   }
 
