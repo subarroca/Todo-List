@@ -1,5 +1,8 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { IonicStorageModule, Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
+import { } from 'jasmine';
+
+
 
 import { TodoSection } from './../models/todo-section';
 import { LocalTodoService } from './local-todo.service';
@@ -8,8 +11,6 @@ import { HistoryActionService } from './history-action.service';
 
 
 describe('Provider: LocalTodo', () => {
-  let service;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [

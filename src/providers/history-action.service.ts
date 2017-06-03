@@ -1,9 +1,7 @@
-import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
 
 
 import { HistoryAction } from './../models/history-action';
-import { TodoSection } from './../models/todo-section';
 
 
 @Injectable()

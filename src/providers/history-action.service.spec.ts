@@ -1,5 +1,8 @@
 import { TestBed, inject } from '@angular/core/testing';
-import { IonicStorageModule, Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
+import { } from 'jasmine';
+
+
 
 import { HistoryAction } from './../models/history-action';
 import { HistoryActionService } from './history-action.service';
@@ -26,8 +29,6 @@ const action6 = new HistoryAction({
 });
 
 describe('Provider: HistoryAction', () => {
-  let service;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [

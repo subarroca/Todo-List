@@ -13,5 +13,9 @@ https://www.joshmorony.com/introduction-to-testing-ionic-2-applications-with-tes
 * Testing has been skipped from this point to do as much features form the requirements as possible. Given this is a test to see capabilities I'll assume they're already demonstrated
 
 
-### Details
-* In order to use history action all interaction with todo items has to be done through the service.
+### Considerations
+* In order to use history action all interaction with todo items has to be done through the service
+* A starting template with testing included would be much appreciated in order not to loose almost 45 minutes trying to make ionic and testing work at the same time
+
+### Improvements
+* Update angular-cli to @angular/cli
