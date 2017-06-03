@@ -4,10 +4,4 @@ describe('Model: HistoryAction', () => {
 
   it('has current timestamp', () => {
   });
-
-  it('contains defined items', () => {
-  });
-
-  it('returns ordered items', () => {
-  });
 })
