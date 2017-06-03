@@ -8,10 +8,7 @@ import { Http } from '@angular/http';
 
 @Injectable()
 export class ApiTodoService {
-  // TODO: move this to a safer place
   baseURL: 'https://adrian.howaboutsales.com';
-  username: 'frontendtest@howaboutsales.com';
-  password: 'Frontend2017';
 
   token: string;
 
@@ -25,8 +22,15 @@ export class ApiTodoService {
   }
 
   private login() {
-    this.http.get(`${this.baseURL}/api/login/getToken`)
-      .subscribe(res => console.log(res.json()));
+    // TODO: move this to a safer place
+    const username = 'frontendtest@howaboutsales.com';
+    const password = 'Frontend2017';
+
+    this.http.post(`${this.baseURL}/api/login/getToken`, {
+      username: username,
+      password: password
+    })
+      .subscribe(res => this.token = res.json().token);
   }
 
 }
